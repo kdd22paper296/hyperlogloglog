@@ -1,0 +1,17 @@
+Build instructions:
+
+Execute
+$ docker build -t hyperlogloglog .
+
+This should build a Docker image named hyperlogloglog.
+
+Running unit tests:
+
+$ docker run hyperlogloglog /bin/bash -c 'cd hyperlogloglog && make test && ./test'
+
+Running experiments:
+Run
+$ python3 experiments.py --help for instructions
+The results will be written to results/
+These can be exported into CSV format by running
+$ python3 data_export.py > results.csv
